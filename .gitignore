@@ -63,7 +63,6 @@ logs/
 # Database
 *.db
 *.sqlite3
-*.json
 
 # Temporary files
 *.tmp
