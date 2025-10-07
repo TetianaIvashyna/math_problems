@@ -1,31 +1,31 @@
 {% extends "base.html" %}
 
-{% block title %}Math Problem {{ problem.id }}{% endblock %}
+{% block title %}Математична задача {{ problem.id }}{% endblock %}
 
 {% block content %}
 <div class="problem-container">
-    <h1>Math Problem</h1>
-
+    <h1>Задача</h1>
+    
     <div class="problem-display">
         <h2>{{ problem.question }}</h2>
     </div>
-
+    
     <form method="POST" action="{{ url_for('check_answer') }}">
         <div class="answer-input">
-            <label for="answer">Your Answer:</label>
+            <label for="answer">Ваша відповідь:</label>
             <input type="number" id="answer" name="answer" required>
         </div>
-    
+        
         <div class="submit-button">
-            <button type="submit">Apply</button>
+            <button type="submit">Готово!</button>
         </div>
     </form>
-        
+    
     {% if error_message %}
-        <div class="error-message">
-            <p>{{ error_message }}</p>
-            <button onclick="hideError()">OK</button>
-        </div>
+    <div class="error-message">
+        <p>{{ error_message }}</p>
+        <button onclick="hideError()">Гаразд</button>
+    </div>
     {% endif %}
 </div>
 {% endblock %}
