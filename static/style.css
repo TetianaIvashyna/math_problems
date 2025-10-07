@@ -128,10 +128,136 @@ button:active {
     }
 }
 
+/* Completion page styles */
+.completion-container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.completion-container h1 {
+    color: #333;
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    z-index: 2;
+    position: relative;
+}
+
+.completion-actions {
+    z-index: 2;
+    position: relative;
+}
+
+.back-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.back-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Confetti animation */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ff6b6b;
+    animation: confetti-fall 3s linear infinite;
+}
+
+.confetti-1 {
+    left: 10%;
+    animation-delay: 0s;
+    background: #ff6b6b;
+}
+
+.confetti-2 {
+    left: 20%;
+    animation-delay: 0.3s;
+    background: #4ecdc4;
+}
+
+.confetti-3 {
+    left: 30%;
+    animation-delay: 0.6s;
+    background: #45b7d1;
+}
+
+.confetti-4 {
+    left: 40%;
+    animation-delay: 0.9s;
+    background: #f9ca24;
+}
+
+.confetti-5 {
+    left: 50%;
+    animation-delay: 1.2s;
+    background: #f0932b;
+}
+
+.confetti-6 {
+    left: 60%;
+    animation-delay: 1.5s;
+    background: #eb4d4b;
+}
+
+.confetti-7 {
+    left: 70%;
+    animation-delay: 1.8s;
+    background: #6c5ce7;
+}
+
+.confetti-8 {
+    left: 80%;
+    animation-delay: 2.1s;
+    background: #a29bfe;
+}
+
+.confetti-9 {
+    left: 90%;
+    animation-delay: 2.4s;
+    background: #fd79a8;
+}
+
+.confetti-10 {
+    left: 95%;
+    animation-delay: 2.7s;
+    background: #fdcb6e;
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     .problem-container {
         padding: 1.5rem;
+    }
+
+    .completion-container {
+        padding: 2rem;
     }
 
     h1 {
@@ -140,5 +266,9 @@ button:active {
 
     h2 {
         font-size: 1.5rem;
+    }
+
+    .completion-container h1 {
+        font-size: 2rem;
     }
 }

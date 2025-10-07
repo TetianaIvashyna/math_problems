@@ -15,7 +15,7 @@ def index():
     current_problem_index = session.get('current_problem_index', 0)
     
     if current_problem_index >= len(problems):
-        return "Вітаємо! Ви вирішили всі задачі!"
+        return render_template('completion.html')
     
     current_problem = problems[current_problem_index]
     return render_template('problem.html', problem=current_problem)

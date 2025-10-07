@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Завершено!{% endblock %}
+
+{% block content %}
+<div class="completion-container">
+    <h1>Вітаємо! Ви вирішили всі задачі!</h1>
+    
+    <div class="completion-actions">
+        <a href="{{ url_for('reset_session') }}" class="back-button">
+            Назад
+        </a>
+    </div>
+    
+    <!-- Confetti elements -->
+    <div class="confetti confetti-1"></div>
+    <div class="confetti confetti-2"></div>
+    <div class="confetti confetti-3"></div>
+    <div class="confetti confetti-4"></div>
+    <div class="confetti confetti-5"></div>
+    <div class="confetti confetti-6"></div>
+    <div class="confetti confetti-7"></div>
+    <div class="confetti confetti-8"></div>
+    <div class="confetti confetti-9"></div>
+    <div class="confetti confetti-10"></div>
+</div>
+{% endblock %}
