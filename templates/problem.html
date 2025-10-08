@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="problem-container">
-    <h1>Задача</h1>
+    <h1>Задача {{ problem.id }}</h1>
     
     <div class="problem-display">
         <h2>{{ problem.question }}</h2>
@@ -13,18 +13,20 @@
     <form method="POST" action="{{ url_for('check_answer') }}">
         <div class="answer-input">
             <label for="answer">Ваша відповідь:</label>
-            <input type="number" id="answer" name="answer" required>
+            <input type="number" id="answer" name="answer" required title="Будь ласка, введіть числову відповідь тут">
         </div>
         
         <div class="submit-button">
-            <button type="submit">Готово!</button>
+            <button type="submit">Застосувати</button>
         </div>
     </form>
     
     {% if error_message %}
-    <div class="error-message">
-        <p>{{ error_message }}</p>
-        <button onclick="hideError()">Гаразд</button>
+    <div class="modal-overlay" id="errorModal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <p class="error-text">{{ error_message }}</p>
+            <button onclick="closeModal()">OK</button>
+        </div>
     </div>
     {% endif %}
 </div>

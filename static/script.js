@@ -1,22 +1,10 @@
-// Function to hide error message
-function hideError() {
-    const errorMessage = document.querySelector('.error-message');
-    if (errorMessage) {
-        errorMessage.classList.remove('show');
-        // Hide after animation
-        setTimeout(() => {
-            errorMessage.style.display = 'none';
-        }, 300);
+// Function to close modal
+function closeModal() {
+    const modal = document.getElementById('errorModal');
+    if (modal) {
+        modal.style.display = 'none';
     }
-}
-
-// Function to show error message
-function showError() {
-    const errorMessage = document.querySelector('.error-message');
-    if (errorMessage) {
-        errorMessage.style.display = 'block';
-        errorMessage.classList.add('show');
-    }
+    focusAnswer();
 }
 
 // Function to clear answer input
@@ -69,6 +57,11 @@ document.addEventListener('DOMContentLoaded', function() {
         answerInput.addEventListener('input', function(e) {
             // Only allow numbers
             e.target.value = e.target.value.replace(/[^0-9]/g, '');
+        });
+        
+        // Close modal when clicking on answer input
+        answerInput.addEventListener('focus', function() {
+            closeModal();
         });
     }
 });
