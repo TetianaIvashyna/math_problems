@@ -1,15 +1,14 @@
 {% extends "base.html" %}
 
-{% block title %}Тун Тун Тун Сагур!{% endblock %}
+{% block title %}Завершено!{% endblock %}
 
 {% block content %}
 <div class="completion-container">
-    <h1>Тун Тун Тун Сагур! </h1>
-    <h2>Ви розвʼязали всі задачі!</h2>
-    <h2>Хороша робота!</h2>
+    <h1>Вітаємо! Ви вирішили всі задачі!</h1>
+    
     <div class="completion-actions">
         <a href="{{ url_for('reset_session') }}" class="back-button">
-            Назад до задач 
+            Назад
         </a>
     </div>
     

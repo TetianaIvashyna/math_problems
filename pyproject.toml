@@ -7,7 +7,7 @@ authors = [
 ]
 license = {text = "MIT"}
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.13,<4.0"
 dependencies = [
     "flask (>=3.1.2,<4.0.0)",
     "python-decouple (>=3.8,<4.0)"
