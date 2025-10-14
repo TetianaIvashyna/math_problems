@@ -63,6 +63,8 @@ logs/
 # Database
 *.db
 *.sqlite3
+all-problems.json
+problems.json
 
 # Temporary files
 *.tmp

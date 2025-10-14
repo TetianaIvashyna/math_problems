@@ -189,6 +189,7 @@ button:active {
     text-decoration: none;
     padding: 1rem 2rem;
     border-radius: 8px;
+    margin: 2rem;
     font-size: 1.1rem;
     font-weight: 500;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
